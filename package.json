@@ -1,0 +1,27 @@
+{
+  "name": "tailwind-tutorial",
+  "version": "1.0.0",
+  "description": "Initializing a New Project: \r 1)\tSetting Up Development Environment:\r a)\tCreate a folder:\r In your PC create an empty folder and name it according to the project name.\r b)\tSetting up git:\r \tCheck git version [git  --version]\r \tConfig git [git config –global user.name “user name of your git account” & git config –global user.email “email address of your git account”]\r \tInitialize the folder as a local git repository [git init]\r \tLink online repository with the local repository [git remote add origin “url of the remote repository”]\r c)\tSetting up node.js and npm: \r a.\tCheck versions [node -v & npm -v]\r b.\tInitialize npm [npm init  -y]\r d)\tInstall lite-server for real time evaluation:\r \tInstall lite-server as developer dependency [npm install lite-server –save-dev]\r \tInside package.json file update the scripts \r “scripts”: {\r “start”: “npm run lite”,\r “task”: “whatever it has, leave it as it is”,\r “lite”: “lite-server”\r }\r e)\tInstalling TailwindCSS : \r \tInstall tailwindcss [npm I -D tailwindcss]\r \tInstall plugin in VScode for TailwindCSS [tailwindcss intelllisense] \r \tCreate a config file for tailwind css [npx tailwindcss init]\r \tCreate two folders named src and output in the root directory\r \tIn the src folder create a file named tailwind.css\r o\t@tailwind base;\r o\t@tailwind components;\r o\t@tailwind utilities;\r \tCreate a folder named .vscode\r \tCreate a file inside .vscode folder named settings.json\r {\r “css.validate’: false;\r “tailwindCSS.emmetCompletions”: true;\r }",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./src/tailwind.css -o ./output/tailwind.css -w",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shovontanvir/tailwind-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shovontanvir/tailwind-tutorial/issues"
+  },
+  "homepage": "https://github.com/shovontanvir/tailwind-tutorial#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "tailwindcss": "^2.2.19"
+  }
+}
